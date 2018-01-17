@@ -25,9 +25,6 @@ function studentAdd() {
     console.log(newStudent);
     return newStudent;
 
-
-
-
 }
 
 function show(student) {
@@ -37,9 +34,9 @@ function show(student) {
     result += "<div class='col m12'>";
     result += "<div class='card blue-grey darken-1'>";
     result += "<div class='card-content white-text'>";
-    result += "<p><strong>Nombre:</strong> " + estudiante.nombre + "</p>";
-    result += "<p><strong>Puntos Técnicos:</strong> " + estudiante.puntajeTecnico + "</p>";
-    result += "<p><strong>Puntos HSE:</strong> " + estudiante.puntajeHse + "</p>";
+    result += "<p><strong>Nombre:</strong> " + student.name + "</p>";
+    result += "<p><strong>Puntos Técnicos:</strong> " +   student.tecPoint + "</p>";
+    result += "<p><strong>Puntos HSE:</strong> " + student.tecHSE + "</p>";
     result += "</div>";
     result += "</div>";
     result += "</div>";
@@ -47,10 +44,16 @@ function show(student) {
     return result;
 }
 
-function listShow(students) {
-    // TO DO: Iterar la lista del estudiantes para devolverlos en el formato que usa la función mostrar(estudiante)
-  // Retornar el template de todos los estudiantes
 
+function listShow(students) {
+  var contentHtml = "";
+    // TO DO: Iterar la lista del estudiantes para devolverlos en el formato que usa la función show(estudiante)
+    for ( var i = 0; i < students.length; i++ ) {
+      contentHtml += show(students[i]);
+      // console.log (students[i]);
+    }
+  // Retornar el template de todos los estudiantes
+  return contentHtml;
 }
 
 function search(studentName, students) {
