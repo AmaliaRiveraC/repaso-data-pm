@@ -22,7 +22,7 @@ function studentAdd() {
     students.push(newStudent);
 
     // TO DO: Retornar el estudiante recientemente creado
-    console.log(newStudent);
+    // console.log(newStudent);
     return newStudent;
 
 }
@@ -57,10 +57,12 @@ function listShow(students) {
 }
 
 function search(studentName, students) {
+
+    // var listStudents = getStudentsList();
     // TO DO: Buscar el nombre en la lista de estudiantes que se recibe por parámetros
     // Retornar el objeto del estudiante buscado
     // Nota: NO IMPORTA SI EL USUARIO ESCRIBE EL NOMBRE EN MAYÚSCULAS O MINÚSCULAS
-
+    // return studentName;
 }
 
 function topTech(students) {

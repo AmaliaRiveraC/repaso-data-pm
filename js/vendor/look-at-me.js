@@ -20,10 +20,18 @@
         result.innerHTML = listShow(students);
     };
 
-    
+    var searchEvent = function (e) {
+      e.preventDefault();
+      var studentName = prompt("Ingrese nombre del estudiante");
+      // console.log(studentName);
+      var students = getStudentsList();
+      // console.log(students);
+      var lookStudent = search(studentName, students)
+      result.innerHTML = listShow(lookStudent);
+    }
 
     // Manejadores de eventos
     addBoton.addEventListener('click', addEvent);
     showBoton.addEventListener('click', showEvent);
-    
+    searchBoton.addEventListener('click',searchEvent);
 }();
