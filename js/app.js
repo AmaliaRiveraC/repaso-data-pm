@@ -2,16 +2,32 @@ var students = [];
 
 function getStudentsList() {
     // TO DO: Retornar la lista de estudiantes
-   
+    return students;
+    //console.log(students);
+
 }
 
 function studentAdd() {
     // TO DO: Preguntar al usuario por el nombre, puntos técnicos y puntos de HSE de un estudiante
+    var name = prompt("Ingrese nombre de estudiante");
+    var tecPoint = parseInt(prompt("Ingrese puntos técnicos"));
+    var hsePoint = parseInt(prompt("Ingrese puntos HSE"));
     // Hint: El estudiante debe ser agregado a la lista de estudiantes
-    // TO DO: Retornar el estudiante recientemente creado
-    
+    var newStudent = {
+      "name" : name,
+      "tecPoint" : tecPoint,
+      "tecHSE" : hsePoint
+    };
 
-   
+    students.push(newStudent);
+
+    // TO DO: Retornar el estudiante recientemente creado
+    console.log(newStudent);
+    return newStudent;
+
+
+
+
 }
 
 function show(student) {
